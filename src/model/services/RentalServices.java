@@ -12,13 +12,14 @@ public class RentalServices {
 	
 	// Composição
 	
-	private BrazilTaxServices taxService;
+	private TaxService taxService; // agora a rentalservic vai depender de taxservice que é uma 
+	// classe genérica, a brasil tax service é um subtipo de tax service, por isso ocorre um upservice
 
 	
 	// Construtores
 	
 	
-	public RentalServices(Double pricePerHour, Double pricePerDay, BrazilTaxServices taxService) {
+	public RentalServices(Double pricePerHour, Double pricePerDay, TaxService taxService) {
 		this.pricePerHour = pricePerHour;
 		this.pricePerDay = pricePerDay;
 		this.taxService = taxService;
